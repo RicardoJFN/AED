@@ -46,4 +46,17 @@ public class LibMatrix {
 
         return im;
     }
+
+    public static Matrix transpose(Matrix m) {
+
+        Matrix t = new Matrix(m.cols, m.rows);
+
+        for (int i=0; i<t.rows; i++)
+
+            for (int j=0; j<t.cols; j++)
+
+                t.data[i][j] = m.data[j][i];
+
+        return t;
+    }
 }
