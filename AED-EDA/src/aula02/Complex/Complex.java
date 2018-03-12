@@ -1,4 +1,4 @@
-package aula02;
+package aula02.Complex;
 
 public class Complex {
     final double x;

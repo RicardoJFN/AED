@@ -1,4 +1,4 @@
-package aula02;
+package aula02.exercicio02;
 
 import java.io.File;
 import java.io.FileNotFoundException;

@@ -1,4 +1,4 @@
-package aula02;
+package aula02.Complex;
 
 public class LibComplex {
     public static Complex add(Complex z1, Complex z2){
