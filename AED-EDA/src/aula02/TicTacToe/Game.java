@@ -9,25 +9,42 @@ public class Game {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        //Matrix matrix = new Matrix(3,3);
-        char[][] table = new char[3][3];
+
+        /*
+        Create a board with 3x3 matrix;
+         */
+        char[][] board = new char[3][3];
 
 
-        System.out.println("Jogo do Galo!" + "\n" +
-                            "Tecla 1 = X, tecla 0 = O");
+        System.out.println("Jogo do Galo!");
 
-//        int jogada = scanner.nextInt();
-
+        /*
+        Clear the board to start a new one.
+        The '-' is there in order to fill the matrix, waiting for the input to be replaced.
+         */
         for (int i = 0; i != 3; i++)
             for (int j = 0; j != 3; j++)
-                table[i][j] = '-';
+                board[i][j] = '-';
 
-        for(int i = 0; i != table.length; i++)
-            System.out.println(table[i]);
+        /*
+        Testing purpose (Check the new board created)
+         */
+        for(int i = 0; i != board.length; i++)
+            System.out.println(board[i]);
+
+        /*
+        The following lines of code is there in order to test the input in the
+        board and print it to the user.
+         */
+        char move = scanner.next().charAt(0);
+
+        board[0][0] = move;
+
+        for(int i = 0; i != board.length; i++)
+            System.out.println(board[i]);
 
 
-
-
+        System.out.println("");
 
 
     }
