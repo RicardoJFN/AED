@@ -5,7 +5,7 @@ public class Matrix {
     int rows;
     int cols;
 
-    Matrix(int r, int c){
+    public Matrix(int r, int c){
         data = new int[r][c];
         rows = r;
         cols = c;

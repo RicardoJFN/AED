@@ -26,7 +26,7 @@ public class TestMatrix {
 
         LibMatrix.read(m, stdin);
 
-        System.out.println(LibMatrix.toString(LibMatrix.transpose(mm)));
+        System.out.println(LibMatrix.toString(LibMatrix.transpose(m)));
 
 
         // Comando de excepão
