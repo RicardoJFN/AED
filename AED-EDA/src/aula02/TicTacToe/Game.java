@@ -3,6 +3,7 @@ package aula02.TicTacToe;
 import aula02.exercicio04.LibMatrix;
 import aula02.exercicio04.Matrix;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Game {
@@ -36,15 +37,53 @@ public class Game {
         The following lines of code is there in order to test the input in the
         board and print it to the user.
          */
-        char move = scanner.next().charAt(0);
+        /*char move = scanner.next().charAt(0);
 
         board[0][0] = move;
+
+
+
+
+        System.out.println("");*/
+
+
+        /*
+        First approach in generating player and ai moves to the board.
+        Next stop:
+            - Generate a game with a number of plays in order to get a full game
+        */
+        double aiPlay = Math.random();
+
+        if (aiPlay > 0.5)
+            aiPlay = 1;
+
+        System.out.println("Introduz a tua jogada dizendo a posição que queres: ");
+        int coordRow = scanner.nextInt();
+        int coordColumn = scanner.nextInt();
+
+        board[coordRow][coordColumn] = 'X';
+
 
         for(int i = 0; i != board.length; i++)
             System.out.println(board[i]);
 
 
-        System.out.println("");
+        int aiRowPlay = (int) (Math.random() * 2);
+        int aiColumnPlay = (int) (Math.random() * 2);
+
+        board[aiRowPlay][aiColumnPlay] = 'O';
+
+        if (board[aiRowPlay][aiColumnPlay] == 'X'){
+            aiRowPlay = (int) (Math.random() * 2);
+            aiColumnPlay = (int) (Math.random() * 2);
+            board[aiRowPlay][aiColumnPlay] = 'O';
+        }
+
+        for(int i = 0; i != board.length; i++)
+            System.out.println(board[i]);
+
+
+
 
 
     }
