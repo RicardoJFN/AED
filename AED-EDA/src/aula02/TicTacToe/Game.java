@@ -3,6 +3,7 @@ package aula02.TicTacToe;
 import aula02.exercicio04.LibMatrix;
 import aula02.exercicio04.Matrix;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -57,11 +58,26 @@ public class Game {
         if (aiPlay > 0.5)
             aiPlay = 1;
 
-        System.out.println("Introduz a tua jogada dizendo a posição que queres: ");
-        int coordRow = scanner.nextInt();
-        int coordColumn = scanner.nextInt();
 
-        board[coordRow][coordColumn] = 'X';
+
+        for (int i = 0; i != 9; i++){
+            System.out.println("Introduz a tua jogada dizendo a posição que queres: ");
+            int coordRow = scanner.nextInt();
+            int coordColumn = scanner.nextInt();
+
+            board[coordRow][coordColumn] = 'X';
+
+            int[] playerMoves = new int[2];
+            playerMoves[0] = coordRow;
+            playerMoves[1] = coordColumn;
+        }
+
+
+
+
+        int[] saves = new int[3];
+
+
 
 
         for(int i = 0; i != board.length; i++)
@@ -71,16 +87,25 @@ public class Game {
         int aiRowPlay = (int) (Math.random() * 2);
         int aiColumnPlay = (int) (Math.random() * 2);
 
-        board[aiRowPlay][aiColumnPlay] = 'O';
-
-        if (board[aiRowPlay][aiColumnPlay] == 'X'){
+        if (board[aiRowPlay][aiColumnPlay] != 'X')
+            board[aiRowPlay][aiColumnPlay] = 'O';
+        else {
             aiRowPlay = (int) (Math.random() * 2);
             aiColumnPlay = (int) (Math.random() * 2);
             board[aiRowPlay][aiColumnPlay] = 'O';
         }
 
+
+
+
         for(int i = 0; i != board.length; i++)
             System.out.println(board[i]);
+
+
+
+        /*
+        Guardar a jogada(coordenadas) numa lista. Se as posições da lista forem seguidas então o jogo terminou.
+        */
 
 
 
