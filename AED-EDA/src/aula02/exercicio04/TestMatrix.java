@@ -20,13 +20,13 @@ public class TestMatrix {
 
 
         // Inserir uma matriz manualmente
-        //Scanner stdin = new Scanner(System.in);
+        // Scanner stdin = new Scanner(System.in);
 
         Matrix m = new Matrix(stdin.nextInt(), stdin.nextInt());
 
         LibMatrix.read(m, stdin);
 
-        System.out.println(LibMatrix.toString(LibMatrix.transpose(mm)));
+        System.out.println(LibMatrix.toString(LibMatrix.transpose(m)));
 
 
         // Comando de excepão
