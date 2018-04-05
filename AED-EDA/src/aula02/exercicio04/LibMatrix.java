@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class LibMatrix {
 
-    static void read(Matrix m, Scanner in) {
+    public static void read(Matrix m, Scanner in) {
 
         for (int i=0; i<m.rows; i++)
 
