@@ -1,5 +1,7 @@
 package aula5.code3;
 
+import java.util.ListIterator;
+
 public class LibLinkedList {
 
   public static <T extends Comparable<? super T>>
@@ -125,6 +127,20 @@ public class LibLinkedList {
     for ( int i = 0; i < index ; i++ ) 
       p = p.next;
     return p.value;
+  }
+
+  public static <T extends Comparable<? super T>> void filter(LinkedList<T> l, T min, T max){
+    int value = 0;
+    T value2 = l.first.value;
+    for (int i = 0; i != l.size; i++){
+       value = l.first.value.compareTo(min);
+       //if (value != 1 || value != 0)
+           //remove(l, l.first.value);
+
+
+
+    }
+      System.out.println(value);
   }
 
 }
