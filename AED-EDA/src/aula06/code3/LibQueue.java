@@ -1,5 +1,7 @@
 package aula06.code3;
 
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+
 public class LibQueue {
 
   public static <T extends Comparable<? super T>>
@@ -37,11 +39,36 @@ public class LibQueue {
 
   public static void process(Queue<String> q, Queue<String> a, Queue<String> b){
 
-      while (!isEmpty(q)){
-        String name = remove(q);
-        String x = peek(q);
-        String stop = "";
+    while (!isEmpty(q)){
+
+
+      String name = peek(q);
+      String temp = "";
+      //System.out.println(name);
+
+      if (!name.equals("A") && !name.equals("B") && !name.equals("X")){
+
+        temp = name;
+        remove(q);
+
+      } else {
+
+        if (name.equals("A")) {
+          add(a, temp);
+          remove(q);
+        }
+        if (name.equals("B")) {
+          add(b, temp);
+        remove(q);}
+
+        if (name.equals("X")) {
+          remove(q);
+        }
       }
+
+    }
+
+
   }
 
 }
