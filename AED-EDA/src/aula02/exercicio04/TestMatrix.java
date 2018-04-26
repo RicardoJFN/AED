@@ -20,7 +20,7 @@ public class TestMatrix {
 
 
         // Inserir uma matriz manualmente
-        //Scanner stdin = new Scanner(System.in);
+        // Scanner stdin = new Scanner(System.in);
 
         Matrix m = new Matrix(stdin.nextInt(), stdin.nextInt());
 
