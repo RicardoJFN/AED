@@ -1,4 +1,4 @@
-package aula5.code3;
+package aula06.code3;
 
 public class TestLinkedList {
   public static void main(String args[]) {

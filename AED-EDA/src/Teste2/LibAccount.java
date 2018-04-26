@@ -22,8 +22,12 @@ public class LibAccount {
         System.out.println("Saldo: " + account.balance + "\n" +
                             "Número de movimentos: " + LibLinkedList.size(account.movements));
 
-        for (int i = 0; i != LibLinkedList.size(account.movements); i++)
-            System.out.println(LibLinkedList.get(account.movements, i) + " -> " + account.balance);
+        double x = 0;
+        for (int i = 0; i != LibLinkedList.size(account.movements); i++){
+            x += LibLinkedList.get(account.movements, i);
+            System.out.println(LibLinkedList.get(account.movements, i) + " -> " + x);
+        }
+
     }
 
 }
