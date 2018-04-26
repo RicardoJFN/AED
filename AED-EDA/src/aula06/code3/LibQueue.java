@@ -71,7 +71,7 @@ public class LibQueue {
           }
 
           if (size(a) < size(b)) {
-            add(b, temp);
+            add(a, temp);
             remove(q);
           }
 
