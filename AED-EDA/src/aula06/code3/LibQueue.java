@@ -39,30 +39,46 @@ public class LibQueue {
 
   public static void process(Queue<String> q, Queue<String> a, Queue<String> b){
 
+    String temp = "";
+
     while (!isEmpty(q)){
 
-
       String name = peek(q);
-      String temp = "";
-      //System.out.println(name);
 
       if (!name.equals("A") && !name.equals("B") && !name.equals("X")){
 
-        temp = name;
-        remove(q);
+        temp = remove(q);
 
       } else {
 
         if (name.equals("A")) {
+
           add(a, temp);
           remove(q);
         }
+
         if (name.equals("B")) {
+
           add(b, temp);
-        remove(q);}
+          remove(q);
+        }
 
         if (name.equals("X")) {
-          remove(q);
+
+          if( size(a) > size(b) ){
+            add(b, temp);
+            remove(q);
+          }
+
+          if (size(a) < size(b)) {
+            add(b, temp);
+            remove(q);
+          }
+
+          if (size(a) == size(b)){
+            remove(q);
+          }
+
         }
       }
 
