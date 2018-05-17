@@ -65,20 +65,18 @@ public class LibQueue {
 
         if (name.equals("X")) {
 
-          if (size(a) == size(b)){
-            remove(q);
-          }
 
           if( size(a) > size(b) ){
             add(b, temp);
-            remove(q);
           }
 
           if (size(a) < size(b)) {
             add(a, temp);
-            remove(q);
+
           }
 
+
+          remove(q);
         }
       }
 
